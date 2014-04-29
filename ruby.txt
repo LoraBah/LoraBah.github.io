@@ -1,0 +1,263 @@
+
+# Rails Environment Configuration.
+
+---
+git:
+  user.name:  Lora Bahchevanova
+  user.email: lora.bah@gmail.com
+  version:    git version 1.8.1.msysgit.1
+
+ruby:
+  bin:        C:/RailsInstaller/Ruby2.0.0/bin/ruby.exe
+  version:    ruby 2.0.0p195 (2013-05-14) [i386-mingw32]
+
+rails:
+  bin:        C:/RailsInstaller/Ruby2.0.0/bin/rails.bat
+  version:    Rails 4.0.0
+
+ssh:
+  public_key_location: C:\Users\Lora/.ssh/id_rsa.pub
+  public_key_contents: ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAvZNHx6zx9A0iqYy3eQ65T
+mQS5KwKFbjiynkVVps5ZhGoHvEBydiJs4fbydekLXDQ9hvJSFb1Dpw/l4QbmNxIyOpfvshrN5R9RRu0/
+kgFVRWo1QXyVCmclGUaE5CqON9XZb0izwGjP55PIGuAfeTjEPXphBMFIra7TqtWehyxSxi0OA3IhK5o8
+lijIqCYBKCNNGL9k6agdlyWspdLXJ6NLj18YUdrs4/22WRCp/dICtUMoThZ3ZdMrfGXXljj9tCciabA9
+Reu6p1y82ceZN4wGkKBtCQ8HOhCW1Lrps/IKw4gViiDOVWCRH6dfq6waRQ7I1jvX8fi+HpYxrh8MIzLO
+w== Lora Bahchevanova <lora.bah@gmail.com>
+
+
+
+
+C:\Sites>cd C:\Users\Lora\Desktop\Projects
+
+C:\Users\Lora\Desktop\Projects>ruby generate_site.rb
+
+C:\Users\Lora\Desktop\Projects>irb
+DL is deprecated, please use Fiddle
+irb(main):001:0> print "hello"
+hello=> nil
+irb(main):002:0> "hello"
+=> "hello"
+irb(main):003:0> "hello.upcase"
+=> "hello.upcase"
+irb(main):004:0> "hello".upcase
+=> "HELLO"
+irb(main):005:0> "<p>%{hello"
+=> "<p>%{hello"
+irb(main):006:0> "<p>%{hello}</p>"
+=> "<p>%{hello}</p>"
+irb(main):007:0> "<p>%{hello}</p>" % {}
+KeyError: key{hello} not found
+        from (irb):7:in `%'
+        from (irb):7
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):008:0> "<p>%{hello}</p>" % {hi}
+SyntaxError: (irb):8: syntax error, unexpected '}', expecting =>
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):009:0> "<p>%{hello}</p>" % {hi=>
+irb(main):010:1* }
+SyntaxError: (irb):10: syntax error, unexpected '}'
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):011:0> "<p>%{hello}</p>" % {hello: "hi"=>
+irb(main):012:1* }
+SyntaxError: (irb):11: syntax error, unexpected =>, expecting '}'
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):013:0> "<p>%{hello}</p>" % {hello: "hi"=>|
+irb(main):014:1* "<p>%{hello}</p>" % {hello: "hi"=>|}
+irb(main):015:1> "<p>%{hello}</p>" % {hello: "hi"}
+irb(main):016:1> }
+SyntaxError: (irb):13: syntax error, unexpected =>, expecting '}'
+"<p>%{hello}</p>" % {hello: "hi"=>|
+                                  ^
+(irb):14: syntax error, unexpected =>, expecting '}'
+"<p>%{hello}</p>" % {hello: "hi"=>|}
+                                  ^
+(irb):16: syntax error, unexpected '}', expecting end-of-input
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):017:0> "<p>%{hello}</p>" % {hello: "hi"}
+=> "<p>hi</p>"
+irb(main):018:0> "<p>%{hello}</p>" % {hello: "hi"}
+=> "<p>hi</p>"
+irb(main):019:0> "<p>%{hello}</p>" % {:hello => "hi"}
+=> "<p>hi</p>"
+irb(main):020:0> "<p>%{hello}</p>".%({:hello => "hi"})
+=> "<p>hi</p>"
+irb(main):021:0> "<p>%{hello}</p>".sprintf({:hello => "hi"})
+NoMethodError: private method `sprintf' called for "<p>%{hello}</p>":String
+        from (irb):21
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):022:0> 10%3
+=> 1
+irb(main):023:0> "10".%({3})
+SyntaxError: (irb):23: syntax error, unexpected '}', expecting =>
+"10".%({3})
+          ^
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):024:0> 10.%(3)
+=> 1
+irb(main):025:0> 2+2
+=> 4
+irb(main):026:0> 2.+(2)
+=> 4
+irb(main):027:0> "test"+"test2"
+=> "testtest2"
+irb(main):028:0> "test".+("test2")
+=> "testtest2"
+irb(main):029:0> 5.+("test")
+TypeError: String can't be coerced into Fixnum
+        from (irb):29:in `+'
+        from (irb):29
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):030:0> "5".+("test")
+=> "5test"
+irb(main):031:0> "test".5
+SyntaxError: (irb):31: no .<digit> floating literal anymore; put 0 before dot
+"test".5
+       ^
+(irb):31: syntax error, unexpected tINTEGER, expecting '('
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):032:0> "test".*5
+=> "testtesttesttesttest"
+irb(main):033:0> "test".*(5)
+=> "testtesttesttesttest"
+irb(main):034:0> "test" * 5
+=> "testtesttesttesttest"
+irb(main):035:0> Hash
+=> Hash
+irb(main):036:0> Hash.new()
+=> {}
+irb(main):037:0> hash.new
+NoMethodError: undefined method `new' for -439565947:Fixnum
+        from (irb):37
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):038:0> String
+=> String
+irb(main):039:0> Nnew
+NameError: uninitialized constant Nnew
+        from (irb):39
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):040:0> String.new()
+=> ""
+irb(main):041:0> String.new(new_string)
+NameError: undefined local variable or method `new_string' for main:Object
+        from (irb):41
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):042:0> String.new("new_string")
+=> "new_string"
+irb(main):043:0> String.new(String.new)
+=> ""
+irb(main):044:0> "".class
+=> String
+irb(main):045:0> "new".class
+=> String
+irb(main):046:0> "new".class.new
+=> ""
+irb(main):047:0> "".class
+=> String
+irb(main):048:0> "".class.new.class
+=> String
+irb(main):049:0> "".class.class
+=> Class
+irb(main):050:0> String.class
+=> Class
+irb(main):051:0> 3.class
+=> Fixnum
+irb(main):052:0> :h.class
+=> Symbol
+irb(main):053:0> :j
+=> :j
+irb(main):054:0> {}.class
+=> Hash
+irb(main):055:0> [].class
+=> Array
+irb(main):056:0> nil
+=> nil
+irb(main):057:0> nil.class
+=> NilClass
+irb(main):058:0> true.class
+=> TrueClass
+irb(main):059:0> false.class
+=> FalseClass
+irb(main):060:0> ["hhh", "ggg", 45, :jj]
+=> ["hhh", "ggg", 45, :jj]
+irb(main):061:0> ["hhh", "ggg", 45, :jj].count
+=> 4
+irb(main):062:0> count.class
+NameError: undefined local variable or method `count' for main:Object
+        from (irb):62
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):063:0> ["hhh", "ggg", 45, :jj, [{}]]
+=> ["hhh", "ggg", 45, :jj, [{}]]
+irb(main):064:0> {}
+=> {}
+irb(main):065:0> dict={}
+=> {}
+irb(main):066:0> dict
+=> {}
+irb(main):067:0> dict.class
+=> Hash
+irb(main):068:0> dict.update(hu, 66)
+NameError: undefined local variable or method `hu' for main:Object
+        from (irb):68
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):069:0> dict.update("hu", 66)
+ArgumentError: wrong number of arguments (2 for 1)
+        from (irb):69:in `update'
+        from (irb):69
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):070:0> dict.update({"hu"=>66, "gu"=>88})
+=> {"hu"=>66, "gu"=>88}
+irb(main):071:0> dict
+=> {"hu"=>66, "gu"=>88}
+irb(main):072:0> dict.update({"nu" => 55})
+=> {"hu"=>66, "gu"=>88, "nu"=>55}
+irb(main):073:0> dict.update({"hu" => 55})
+=> {"hu"=>55, "gu"=>88, "nu"=>55}
+irb(main):074:0> dict.delete("nu")
+=> 55
+irb(main):075:0> dict
+=> {"hu"=>55, "gu"=>88}
+irb(main):076:0> dict2=("nu" => 77)
+SyntaxError: (irb):76: syntax error, unexpected =>, expecting ')'
+dict2=("nu" => 77)
+              ^
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):077:0> dict2={"nu" => 77}
+=> {"nu"=>77}
+irb(main):078:0> dict2
+=> {"nu"=>77}
+irb(main):079:0> dict.update(dict2)
+=> {"hu"=>55, "gu"=>88, "nu"=>77}
+irb(main):080:0> dict.[]=("nnn" => 65)
+ArgumentError: wrong number of arguments (1 for 2)
+        from (irb):80:in `[]='
+        from (irb):80
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):081:0> dict.[]=("nnn", 65)
+=> 65
+irb(main):082:0> dict
+=> {"hu"=>55, "gu"=>88, "nu"=>77, "nnn"=>65}
+irb(main):083:0> dict["nnn"] = 65
+=> 65
+irb(main):084:0> "" % dict
+=> ""
+irb(main):085:0> "kkk %{gu}"
+=> "kkk %{gu}"
+irb(main):086:0> "kkk %{gu}" % dict
+KeyError: key{gu} not found
+        from (irb):86:in `%'
+        from (irb):86
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):087:0> dict[:gu]
+=> nil
+irb(main):088:0> dict[:gu=33]
+SyntaxError: (irb):88: syntax error, unexpected tINTEGER, expecting ']'
+dict[:gu=33]
+           ^
+        from C:/RailsInstaller/Ruby2.0.0/bin/irb:12:in `<main>'
+irb(main):089:0> dict[:gu] = 33
+=> 33
+irb(main):090:0> dict
+=> {"hu"=>55, "gu"=>88, "nu"=>77, "nnn"=>65, :gu=>33}
+irb(main):091:0> "kkk %{gu}" % dict
+=> "kkk 33"
+irb(main):092:0>
