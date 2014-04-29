@@ -1,19 +1,13 @@
-<!DOCTYPE html>
+IO.write("newfile.html", '<!DOCTYPE html>
 <html>
 	<head>
 		<title>Гарванът</title>
 		
-		<style type="text/css" class="" id="jjj">
+		<style type="text/css">
 			body {
-				background-image:url('../images/raven_tattoo.jpg');
+				background-image:url(\'../raven_tattoo.jpg\');
 				background-repeat: no-repeat;
 				background-position: right top;
-				background-color: rgb(202, 143, 241);
-			}
-			
-			/*h1.title small { */
-			body.lang-en #content.wide h1#top.title .red small { 
-				 color: red;
 			}
 
 			.verse {
@@ -70,3 +64,4 @@
 		</p>
 	</body>
 </html>
+')
