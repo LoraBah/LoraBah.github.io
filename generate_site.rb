@@ -7,7 +7,7 @@ template= '
 		
 		<style type="text/css">
 			body {
-				background-image:url('../raven_tattoo.jpg');
+				background-image:url(\'../images/raven_tattoo.jpg\');
 				background-repeat: no-repeat;
 				background-position: right top;
 			}
@@ -53,9 +53,9 @@ template= '
 
 en_text = {
 	title: "The Raven",
-	header: "A Future Page For Something Cool",
+	header1: "A Future Page For Something Cool",
 	my_name: "Lora Bahchevanova",
-	hearer2: "The Raven",
+	header2: "The Raven",
 	author: "Poe",
 	verse1: "<p>Once upon a midnight dreary, while I pondered weak and weary,</p>
 				<p>Over many a quaint and curious volume of forgotten lore, </p>
@@ -75,7 +75,7 @@ en_text = {
 
 bg_text = {
 	title: "Гарванът",
-	header: "Бъдеща страничка за нещо яко",
+	header1: "Бъдеща страничка за нещо яко",
 	my_name: "Лора Бахчеванова",
 	header2: "Гарванът",
 	author: "По",

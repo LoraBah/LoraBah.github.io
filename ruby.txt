@@ -1,34 +1,3 @@
-
-# Rails Environment Configuration.
-
----
-git:
-  user.name:  Lora Bahchevanova
-  user.email: lora.bah@gmail.com
-  version:    git version 1.8.1.msysgit.1
-
-ruby:
-  bin:        C:/RailsInstaller/Ruby2.0.0/bin/ruby.exe
-  version:    ruby 2.0.0p195 (2013-05-14) [i386-mingw32]
-
-rails:
-  bin:        C:/RailsInstaller/Ruby2.0.0/bin/rails.bat
-  version:    Rails 4.0.0
-
-ssh:
-  public_key_location: C:\Users\Lora/.ssh/id_rsa.pub
-  public_key_contents: ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAvZNHx6zx9A0iqYy3eQ65T
-mQS5KwKFbjiynkVVps5ZhGoHvEBydiJs4fbydekLXDQ9hvJSFb1Dpw/l4QbmNxIyOpfvshrN5R9RRu0/
-kgFVRWo1QXyVCmclGUaE5CqON9XZb0izwGjP55PIGuAfeTjEPXphBMFIra7TqtWehyxSxi0OA3IhK5o8
-lijIqCYBKCNNGL9k6agdlyWspdLXJ6NLj18YUdrs4/22WRCp/dICtUMoThZ3ZdMrfGXXljj9tCciabA9
-Reu6p1y82ceZN4wGkKBtCQ8HOhCW1Lrps/IKw4gViiDOVWCRH6dfq6waRQ7I1jvX8fi+HpYxrh8MIzLO
-w== Lora Bahchevanova <lora.bah@gmail.com>
-
-
-
-
-C:\Sites>cd C:\Users\Lora\Desktop\Projects
-
 C:\Users\Lora\Desktop\Projects>ruby generate_site.rb
 
 C:\Users\Lora\Desktop\Projects>irb
